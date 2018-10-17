@@ -43,13 +43,13 @@ def consolidate_cart(cart)
   cart.each do |item|
     # consolidated[item.keys.first] = item.values.first if !consolidated.keys.include?(item.keys.first)
     puts "new: #{consolidated.keys}"
-    if consolidated[item.keys.first].keys.include?(:count)
-      consolidated[item.keys.first][:count] += 1
-    else
-      consolidated[item.keys.first][:count] = 1
-    end
-  end
-  consolidated
+  #   if consolidated[item.keys.first].keys.include?(:count)
+  #     consolidated[item.keys.first][:count] += 1
+  #   else
+  #     consolidated[item.keys.first][:count] = 1
+  #   end
+  # end
+  # consolidated
 end
 
 def apply_coupons(cart, coupons)
