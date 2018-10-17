@@ -38,7 +38,7 @@ def generate_coupons
 	end
 end
 
-def consolidate_cart(cart)
+def consolidate_cart(cart=[])
   consolidated = {}
   cart.each do |item|
     if !consolidated.keys.include?(item.keys.first)
