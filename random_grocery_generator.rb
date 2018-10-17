@@ -64,12 +64,15 @@ def apply_coupons(cart, coupons)
     end
     count +=1 
   end
+  cart
 end
 
 end
 cart = generate_cart
 coupons = generate_coupons
-
+cart = consolidate_cart(cart)
+puts cart
+apply_coupons(cart, coupons)
 puts "Items in cart"
 cart.each do |item|
 	puts "Item: #{item.keys.first}"
