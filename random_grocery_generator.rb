@@ -39,14 +39,18 @@ def generate_coupons
 end
 
 def consolidate_cart(cart)
-  cart_each_with_object({}) do |(key, h), 
-  
+  cart_each_with_object({}) do |(key, h), consolidated|
+    consolidated[key] ||= {}
+    consoldated[key] = h
+    consolidated[key][:count] ||= 0
+    consolidated[key][:count] += 1
+  end
 end
 
 
 cart = generate_cart
 coupons = generate_coupons
-
+puts 
 puts "Items in cart"
 cart.each do |item|
 	puts "Item: #{item.keys.first}"
@@ -54,6 +58,7 @@ cart.each do |item|
 	puts "Clearance: #{item[item.keys.first][:clearance]}"
 	puts "=" * 10
 end
+
 
 puts "Coupons on hand"
 coupons.each do |coupon|
