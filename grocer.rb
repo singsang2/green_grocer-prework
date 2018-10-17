@@ -34,7 +34,10 @@ def apply_coupons(cart, coupons)
   end
   cart
 end
-puts apply_coupons()
+puts apply_coupons({
+  "AVOCADO" => {:price => 3.0, :clearance => true, :count => 3},
+  "KALE"    => {:price => 3.0, :clearance => false, :count => 1}
+}, )
 def apply_clearance(cart)
   cart.each do |item, hash|
     if hash[:clearance]
