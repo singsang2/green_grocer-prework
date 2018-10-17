@@ -61,6 +61,8 @@ def apply_coupons(cart, coupons)
           cart.delete(coupons[counter][:item])
         else
           cart[coupons[counter][:item][:count]] = cart[coupons[counter][:item]][:count]%coupons[counter][:num]
+        end
+      end
     end
     count +=1 
   end
