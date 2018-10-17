@@ -13,9 +13,6 @@ def consolidate_cart(cart)
   end
   consolidated
 end
-puts consolidate_cart([{"PEANUTBUTTER" => {:price => 3.00, :clearance => true}},
-      {"BEETS" => {:price => 2.50, :clearance => false}},
-      {"SOY MILK" => {:price => 4.50, :clearance => true}}])
 
 def apply_coupons(cart, coupons)
   counter = 0
@@ -37,7 +34,7 @@ end
 puts apply_coupons({
   "AVOCADO" => {:price => 3.0, :clearance => true, :count => 3},
   "KALE"    => {:price => 3.0, :clearance => false, :count => 1}
-}, {:item => "AVOCADO", :num => 2, :cost => 5.0})
+}, [{:item => "AVOCADO", :num => 2, :cost => 5.0}])
 
 def apply_clearance(cart)
   cart.each do |item, hash|
