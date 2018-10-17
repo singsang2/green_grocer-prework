@@ -74,6 +74,9 @@ cart = generate_cart
 coupons = generate_coupons
 cart = consolidate_cart(cart)
 puts cart
+puts "="*10
+puts coupons
+puts "="*10
 puts apply_coupons(cart, coupons)
 # puts "Items in cart"
 # cart.each do |item|
