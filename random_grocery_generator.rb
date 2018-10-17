@@ -45,12 +45,13 @@ def consolidate_cart(cart)
     consolidated[key][:count] ||= 0
     consolidated[key][:count] += 1
   end
+  consolidated
 end
 
 
 cart = generate_cart
 coupons = generate_coupons
-puts 
+puts consolidated_cart(cart)
 puts "Items in cart"
 cart.each do |item|
 	puts "Item: #{item.keys.first}"
