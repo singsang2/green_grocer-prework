@@ -38,8 +38,13 @@ def generate_coupons
 	end
 end
 
+def consolidate_cart(cart)
+  
+  
+end
 cart = generate_cart
 coupons = generate_coupons
+puts cart
 
 puts "Items in cart"
 cart.each do |item|
