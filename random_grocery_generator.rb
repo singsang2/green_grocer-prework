@@ -98,6 +98,7 @@ end
   
 cart = generate_cart
 coupons = generate_coupons
+consolidate_cart(cart)
 puts "Items in cart"
 cart.each do |item|
 	puts "Item: #{item.keys.first}"
