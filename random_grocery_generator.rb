@@ -39,12 +39,13 @@ def generate_coupons
 end
 
 def consolidate_cart(cart)
-  
+  cart_each_with_object
   
 end
+
+
 cart = generate_cart
 coupons = generate_coupons
-puts cart
 
 puts "Items in cart"
 cart.each do |item|
