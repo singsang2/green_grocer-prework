@@ -52,7 +52,8 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  
+  if !cart.keys.include?(coupons.collet {|x| x[:item] })
+end
 cart = generate_cart
 coupons = generate_coupons
 
