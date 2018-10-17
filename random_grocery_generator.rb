@@ -42,11 +42,12 @@ def consolidate_cart(cart)
   consolidated = {}
   cart.each do |key, h|
     consolidated[key] = h
-    if consolidated[key].keys.include?(:count)
-      consolidated[key][:count] += 1
-    else
-      consolidated[key][:count] = 1
-    end
+    puts consolidated
+    # if consolidated[key].keys.include?(:count)
+    #   consolidated[key][:count] += 1
+    # else
+    #   consolidated[key][:count] = 1
+    # end
   end
   consolidated
 end
