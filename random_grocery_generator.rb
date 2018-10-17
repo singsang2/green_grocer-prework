@@ -69,7 +69,16 @@ def apply_coupons(cart, coupons)
   cart
 end
 
-
+def apply_clearance(cart)
+  cart.each do |item, hash|
+    if hash[:clearance]
+      cart.values[:price] *= 0.8
+    end
+  end
+  cart
+end
+  
+end 
 cart = generate_cart
 coupons = generate_coupons
 cart = consolidate_cart(cart)
