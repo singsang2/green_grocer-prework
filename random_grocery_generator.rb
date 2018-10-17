@@ -84,7 +84,7 @@ end
 def checkout(cart:{}, coupons:{})
   cart = consolidate_cart(cart)
   cart = apply_coupons(cart, coupons)
-  cart = apply_clearnace0
+  cart = apply_clearnace
   
   total = 0
   
