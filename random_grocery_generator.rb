@@ -39,7 +39,7 @@ def generate_coupons
 end
 
 def consolidate_cart(cart)
-  cart_each_with_object
+  cart_each_with_object({}) do |
   
 end
 
