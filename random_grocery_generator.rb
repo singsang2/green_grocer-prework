@@ -52,7 +52,16 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  if !cart.keys.include?(coupons.collet {|x| x[:item] })
+  counter = 0
+  while counter < coupons.length
+    if cart.keys.include?(coupons[counter][:item])
+      if cart[coupons[counter][:item]][:count] >= coupons[counter][:num]
+        cart[cart[coupons[counter][:item]]+" W/COUPON"] = {price: coupons[counter][:price], clearance:cart[coupons[counter][:item]][:clearance], count: 
+    end
+    
+  end
+end
+
 end
 cart = generate_cart
 coupons = generate_coupons
