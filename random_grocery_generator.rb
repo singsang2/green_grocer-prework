@@ -48,6 +48,7 @@ def consolidate_cart(cart)
       consolidated[item.keys.first][:count] = 1
     end
   end
+  puts consolidated.class
   consolidated
 end
 
