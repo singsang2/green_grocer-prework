@@ -67,7 +67,7 @@ def apply_coupons(cart, coupons)
   cart
 end
 
-end
+
 cart = generate_cart
 coupons = generate_coupons
 cart = consolidate_cart(cart)
