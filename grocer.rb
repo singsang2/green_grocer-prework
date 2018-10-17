@@ -21,10 +21,10 @@ def apply_coupons(cart, coupons)
     if cart.keys.include?(name)
       if cart[name][:count] >= coupons[counter][:num]
         cart["#{name} W/COUPON"] = {price: coupons[counter][:cost], clearance: cart[name][:clearance], count: cart[name][:count]/coupons[counter][:num]}
-        if cart[coupons[counter][:item]][:count]%coupons[counter][:num]==0
-          cart.delete(coupons[counter][:item])
+        if cart[name][:count] % coupons[counter][:num] == 0
+          cart.delete(name)
         else
-          cart[coupons[counter][:item][:count]] = cart[coupons[counter][:item]][:count]%coupons[counter][:num]
+          cart[name][:count] = cart[name][:count] % coupons[counter][:num]
         end
       end
     end
