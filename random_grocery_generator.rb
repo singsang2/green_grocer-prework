@@ -51,7 +51,7 @@ end
 
 cart = generate_cart
 coupons = generate_coupons
-puts consolidated_cart(cart)
+puts consolidate_cart(cart)
 puts "Items in cart"
 cart.each do |item|
 	puts "Item: #{item.keys.first}"
