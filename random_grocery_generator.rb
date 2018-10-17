@@ -39,7 +39,8 @@ def generate_coupons
 end
 
 def consolidate_cart(cart)
-  cart.each_with_object({}) do |(key, h), consolidated|
+  consolidated = {}
+  cart.each do |key, h|
     consolidated[key] = h
     if consolidated[key].keys.include?(:count)
       consolidated[key][:count] += 1
