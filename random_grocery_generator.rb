@@ -99,7 +99,7 @@ end
   
 cart = generate_cart
 coupons = generate_coupons
-#consolidate_cart(cart)
+
 puts "Items in cart"
 cart.each do |item|
 	puts "Item: #{item.keys.first}"
@@ -114,4 +114,4 @@ coupons.each do |coupon|
 	puts "Get #{coupon[:item].capitalize} for #{coupon[:cost]} when you by #{coupon[:num]}"
 end
 
-puts "Your total is #{checkout(cart: cart, coupons: coupons)}"
+#puts "Your total is #{checkout(cart: cart, coupons: coupons)}"
