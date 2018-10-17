@@ -81,25 +81,20 @@ def apply_clearance(cart)
 end
   
   
-def checkout(cart:{}, coupons:{})
-  puts cart.class
-  puts coupons.class
-  puts cart
-  puts "="*20
-  puts coupons
-  # cart = consolidate_cart(cart)
-  # cart = apply_coupons(cart, coupons)
-  # cart = apply_clearance(cart)
+def checkout(cart:[], coupons:[]])
   
-  # total = 0
+  new_cart = apply_coupons(consolidate_cart(cart), coupons)
+  new_cart = apply_clearance(new_cart)
   
-  # cart.each{|item, h| total += h[:price]*h[:count]}
+  total = 0
   
-  # if total > 100
-  #   total *= 0.9
-  # else
-  #   total
-  # end
+  new_cart.each{|item, h| total += h[:price]*h[:count]}
+  
+  if total > 100
+    total *= 0.9
+  else
+    total
+  end
 end
   
 cart = generate_cart
