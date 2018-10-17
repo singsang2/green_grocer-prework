@@ -86,7 +86,14 @@ def checkout(cart)
   
   total = 0
   
-  cart.each{|item, h| h[:price]*h[:count]
+  cart.each{|item, h| total += h[:price]*h[:count]}
+  
+  if total > 100
+    total *= 0.9
+  else
+    total
+  end
+end
   
 cart = generate_cart
 coupons = generate_coupons
