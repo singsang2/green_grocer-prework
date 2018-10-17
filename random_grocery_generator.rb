@@ -56,7 +56,7 @@ def apply_coupons(cart, coupons)
   while counter < coupons.length
     if cart.keys.include?(coupons[counter][:item])
       if cart[coupons[counter][:item]][:count] >= coupons[counter][:num]
-        cart[coupons[counter][:item]+" W/COUPON"] = {price: coupons[counter][:price], clearance:cart[coupons[counter][:item]][:clearance], count: cart[coupons[counter][:item]][:count]/coupons[counter][:num]}
+        cart["#{coupons[counter][:item]}+ W/COUPON"] = {price: coupons[counter][:price], clearance:cart[coupons[counter][:item]][:clearance], count: cart[coupons[counter][:item]][:count]/coupons[counter][:num]}
         if cart[coupons[counter][:item]][:count]%coupons[counter][:num]==0
           cart.delete(coupons[counter][:item])
         else
