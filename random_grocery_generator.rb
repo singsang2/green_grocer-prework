@@ -38,6 +38,7 @@ def generate_coupons
 	end
 end
 
+  
 cart = generate_cart
 coupons = generate_coupons
 
@@ -48,6 +49,7 @@ cart.each do |item|
 	puts "Clearance: #{item[item.keys.first][:clearance]}"
 	puts "=" * 10
 end
+
 
 puts "Coupons on hand"
 coupons.each do |coupon|
