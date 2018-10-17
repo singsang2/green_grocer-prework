@@ -99,19 +99,19 @@ end
   
 cart = generate_cart
 coupons = generate_coupons
-consolidate_cart(cart)
+#consolidate_cart(cart)
 puts "Items in cart"
-# cart.each do |item|
-# 	puts "Item: #{item.keys.first}"
-# 	puts "Price: #{item[item.keys.first][:price]}"
-# 	puts "Clearance: #{item[item.keys.first][:clearance]}"
-# 	puts "=" * 10
-# end
+cart.each do |item|
+	puts "Item: #{item.keys.first}"
+	puts "Price: #{item[item.keys.first][:price]}"
+	puts "Clearance: #{item[item.keys.first][:clearance]}"
+	puts "=" * 10
+end
 
 
-# puts "Coupons on hand"
-# coupons.each do |coupon|
-# 	puts "Get #{coupon[:item].capitalize} for #{coupon[:cost]} when you by #{coupon[:num]}"
-# end
+puts "Coupons on hand"
+coupons.each do |coupon|
+	puts "Get #{coupon[:item].capitalize} for #{coupon[:cost]} when you by #{coupon[:num]}"
+end
 
-# puts "Your total is #{checkout(cart: cart, coupons: coupons)}"
+puts "Your total is #{checkout(cart: cart, coupons: coupons)}"
