@@ -52,11 +52,7 @@ def consolidate_cart(cart)
   end
   consolidated
 end
-puts consolidate_cart([
-  {"AVOCADO" => {:price => 3.0, :clearance => true }},
-  {"AVOCADO" => {:price => 3.0, :clearance => true }},
-  {"KALE"    => {:price => 3.0, :clearance => false}}
-])
+
 
 def apply_coupons(cart, coupons)
   counter = 0
