@@ -40,10 +40,12 @@ end
 
 def consolidate_cart(cart)
   cart.each_with_object({}) do |(key, h), consolidated|
-    consolidated[key] ||= {}
     consolidated[key] = h
-    consolidated[key][:count] ||= 0
-    consolidated[key][:count] += 1
+    if consolidated[key].keys.include?(:count)
+      consolidated[key][:count] += 1
+    else
+      consolidated[key][:count] = 1
+    end
   end
   consolidated
 end
