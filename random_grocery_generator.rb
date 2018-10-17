@@ -52,7 +52,9 @@ def consolidate_cart(cart=[])
   end
   consolidated
 end
-
+puts consolidate_cart([{"PEANUTBUTTER" => {:price => 3.00, :clearance => true}},
+      {"BEETS" => {:price => 2.50, :clearance => false}},
+      {"SOY MILK" => {:price => 4.50, :clearance => true}}])
 
 def apply_coupons(cart, coupons)
   counter = 0
