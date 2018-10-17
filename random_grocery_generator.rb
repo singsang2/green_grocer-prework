@@ -50,7 +50,7 @@ def consolidate_cart(cart)
       consolidated[item.keys.first][:count] = 1
     end
   end
-  consolidated
+  puts consolidated
 end
 
 def apply_coupons(cart, coupons)
